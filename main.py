@@ -4,7 +4,8 @@ def main():
     dict_of_chars = count_chars(text)
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{count_words(text)} words in the document")
-    print(convert_dict_to_list_of_dicts(dict_of_chars))
+    for i in convert_dict_to_list_of_dicts(dict_of_chars):
+        print(f"The '{i['key']}' character was found {i['num']} times")
 
 
 def get_book_text(path):
